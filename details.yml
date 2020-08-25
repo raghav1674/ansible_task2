@@ -1,0 +1,10 @@
+- key: my_vpc_1
+- type_instance: t2.micro
+- tag_name: webserver
+- subnet_id: subnet-030c6f9e84ebb99b4
+- region_id: ap-south-1
+- security_group_id: sg-03a9a56f8f6489321
+- inventory_path: db_ec2
+- ami_id: ami-052c08d70def0ac62
+- has_public_ip: yes
+
