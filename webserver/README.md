@@ -13,6 +13,11 @@ Role Variables
 --------------
 
 
+conf_file: raghav
+document_root_folder: "/var/www/raghav"
+git_url: "https://raw.githubusercontent.com/raghav1674/devopstask3/master/index.html"
+http_port: 81
+
 
 Dependencies
 ------------
