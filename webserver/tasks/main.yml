@@ -1,0 +1,40 @@
+  
+
+
+  - name: installing httpd 
+    package:
+      name: httpd
+      state: present
+    when: ansible_distribution == "RedHat"
+    register: software
+
+  - name: copying the conf file 
+    template:
+      dest: "/etc/httpd/conf.d/{{ conf_file }}.conf"
+      src:  "copy.j2"
+    when: software.rc == 0
+    notify: restart service
+  
+
+  - name: creating the document root folder
+    file:
+      dest: "{{ document_root_folder }}"
+      state: directory
+    register: document_root
+
+  - name: copying the webpages to document root folder
+    get_url:
+      url: "{{ git_url }}"
+      dest: "{{ document_root_folder }}/index.html"
+    when: document_root.failed == false
+    register: webpages
+
+  - name: start the httpd service
+    service: 
+      name: httpd
+      state: started
+    when: webpages.changed == true
+   
+
+
+

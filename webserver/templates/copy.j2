@@ -1,0 +1,5 @@
+LISTEN {{ http_port }}
+
+<VirtualHost {{ ansible_default_ipv4.address}}:{{ http_port }}>
+DocumentRoot {{ document_root_folder }}
+</VirtualHost>
