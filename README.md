@@ -13,4 +13,4 @@ __Statement : Deploy Web Server on AWS through ANSIBLE!__
 
 <img src="https://github.com/raghav1674/ansible_task2/blob/master/ss/001.PNG" />
 
-!(image)[https://github.com/raghav1674/ansible_task2/blob/master/ss/001.PNG]
+[image](https://github.com/raghav1674/ansible_task2/blob/master/ss/001.PNG)
